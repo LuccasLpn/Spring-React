@@ -19,7 +19,11 @@
 
 .dsmovie-form-btn-container {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    
 }
 
 .dsmovie-movie-card-image {
