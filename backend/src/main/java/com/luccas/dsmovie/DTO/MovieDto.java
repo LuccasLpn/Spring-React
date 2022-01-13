@@ -1,23 +1,16 @@
-package com.luccas.dsmovie.entities;
+package com.luccas.dsmovie.DTO;
 
+import java.io.Serial;
 import java.io.Serializable;
 import java.util.Objects;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import com.luccas.dsmovie.entities.Movie;
 
+public class MovieDto implements Serializable{
 
-@Entity
-@Table(name = "tb_movie")
-public class Movie implements Serializable{
-
+	@Serial
 	private static final long serialVersionUID = 1L;
 	
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String title;
 	private Double score;
@@ -25,18 +18,26 @@ public class Movie implements Serializable{
 	private String image;
 	
 	
-	public Movie() {
-		
+	public MovieDto() {
 	}
 
-
-	public Movie(Long id, String title, Double score, Integer count, String image) {
+	public MovieDto(Long id, String title, Double score, Integer count, String image) {
 		this.id = id;
 		this.title = title;
 		this.score = score;
 		this.count = count;
 		this.image = image;
 	}
+
+
+	public MovieDto(Movie movie) {
+		id = movie.getId();
+		title = movie.getTitle();
+		score = movie.getScore();
+		count = movie.getCount();
+		image = movie.getImage();
+	}
+
 
 
 	public Long getId() {
@@ -44,9 +45,11 @@ public class Movie implements Serializable{
 	}
 
 
+
 	public void setId(Long id) {
 		this.id = id;
 	}
+
 
 
 	public String getTitle() {
@@ -54,9 +57,11 @@ public class Movie implements Serializable{
 	}
 
 
+
 	public void setTitle(String title) {
 		this.title = title;
 	}
+
 
 
 	public Double getScore() {
@@ -64,9 +69,11 @@ public class Movie implements Serializable{
 	}
 
 
+
 	public void setScore(Double score) {
 		this.score = score;
 	}
+
 
 
 	public Integer getCount() {
@@ -74,9 +81,11 @@ public class Movie implements Serializable{
 	}
 
 
+
 	public void setCount(Integer count) {
 		this.count = count;
 	}
+
 
 
 	public String getImage() {
@@ -84,15 +93,18 @@ public class Movie implements Serializable{
 	}
 
 
+
 	public void setImage(String image) {
 		this.image = image;
 	}
+
 
 
 	@Override
 	public int hashCode() {
 		return Objects.hash(id);
 	}
+
 
 
 	@Override
@@ -103,8 +115,9 @@ public class Movie implements Serializable{
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Movie other = (Movie) obj;
+		MovieDto other = (MovieDto) obj;
 		return Objects.equals(id, other.id);
 	}
 	
+
 }
