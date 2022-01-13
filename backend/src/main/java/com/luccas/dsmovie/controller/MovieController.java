@@ -1,7 +1,6 @@
 package com.luccas.dsmovie.controller;
 
 import com.luccas.dsmovie.DTO.MovieDto;
-import com.luccas.dsmovie.DTO.ScoreDto;
 import com.luccas.dsmovie.service.MovieService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -24,5 +23,5 @@ public class MovieController {
     public MovieDto findById(@PathVariable Long id){
         return service.findById(id);
     }
-    
+
 }
