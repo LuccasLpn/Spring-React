@@ -16,8 +16,7 @@ public class MovieDto implements Serializable{
 	private Double score;
 	private Integer count;
 	private String image;
-	
-	
+
 	public MovieDto() {
 	}
 
@@ -28,7 +27,6 @@ public class MovieDto implements Serializable{
 		this.count = count;
 		this.image = image;
 	}
-
 
 	public MovieDto(Movie movie) {
 		id = movie.getId();
@@ -44,68 +42,46 @@ public class MovieDto implements Serializable{
 		return id;
 	}
 
-
-
 	public void setId(Long id) {
 		this.id = id;
 	}
-
-
 
 	public String getTitle() {
 		return title;
 	}
 
-
-
 	public void setTitle(String title) {
 		this.title = title;
 	}
-
-
 
 	public Double getScore() {
 		return score;
 	}
 
-
-
 	public void setScore(Double score) {
 		this.score = score;
 	}
-
-
 
 	public Integer getCount() {
 		return count;
 	}
 
-
-
 	public void setCount(Integer count) {
 		this.count = count;
 	}
-
-
 
 	public String getImage() {
 		return image;
 	}
 
-
-
 	public void setImage(String image) {
 		this.image = image;
 	}
-
-
 
 	@Override
 	public int hashCode() {
 		return Objects.hash(id);
 	}
-
-
 
 	@Override
 	public boolean equals(Object obj) {
@@ -118,6 +94,4 @@ public class MovieDto implements Serializable{
 		MovieDto other = (MovieDto) obj;
 		return Objects.equals(id, other.id);
 	}
-	
-
 }

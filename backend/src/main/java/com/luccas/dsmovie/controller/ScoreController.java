@@ -3,26 +3,24 @@ package com.luccas.dsmovie.controller;
 import com.luccas.dsmovie.DTO.MovieDto;
 import com.luccas.dsmovie.DTO.ScoreDto;
 import com.luccas.dsmovie.service.MovieService;
+import com.luccas.dsmovie.service.ScoreService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping(value = "/movies")
-public class MovieController {
+@RequestMapping(value = "/scores")
+public class ScoreController {
 
     @Autowired
-    private MovieService service;
+    private ScoreService scoreService;
 
-    @GetMapping
-    public Page<MovieDto> findAll(Pageable pageable){
-        return service.findAll(pageable);
-    }
 
-    @GetMapping(value = "/{id}")
-    public MovieDto findById(@PathVariable Long id){
-        return service.findById(id);
+    @PutMapping
+    public MovieDto saveScore(@RequestBody ScoreDto Dto){
+        MovieDto movieDto = scoreService.saveScore(Dto);
+        return movieDto;
     }
     
 }

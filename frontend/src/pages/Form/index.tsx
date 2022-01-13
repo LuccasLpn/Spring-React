@@ -9,6 +9,7 @@ function Form() {
         score: 4.5
     };
     return (
+
         <div className="dsmovie-form-container">
             <img className="dsmovie-movie-card-image" src={movie.image} alt={movie.title} />
             <div className="dsmovie-card-bottom-container">
@@ -33,7 +34,6 @@ function Form() {
                         <Link to="/"><button className="btn btn-danger dsmovie-btn">Cancelar</button></Link>
                     </div>
                 </form >
-                
             </div >
         </div >
     );
