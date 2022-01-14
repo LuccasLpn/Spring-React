@@ -24,15 +24,10 @@ public class Movie implements Serializable{
 
 	@OneToMany(mappedBy = "id.movie")
 	private Set <Score> scores = new HashSet<>();
-
-
-	
 	
 	public Movie() {
 
-
 	}
-
 
 	public Movie(Long id, String title, Double score, Integer count, String image) {
 		this.id = id;
