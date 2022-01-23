@@ -1,12 +1,11 @@
 package com.luccas.dsmovie.DTO;
 
-import java.io.Serial;
+
 import java.io.Serializable;
 
 public class ScoreDto implements Serializable {
 
-    @Serial
-    private static final long serialVersionUID = 1L;
+
 
     private Long movieId;
     private String email;

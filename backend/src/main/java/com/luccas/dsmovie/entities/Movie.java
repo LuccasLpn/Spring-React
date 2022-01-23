@@ -1,5 +1,7 @@
 package com.luccas.dsmovie.entities;
 
+import lombok.Builder;
+
 import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Objects;

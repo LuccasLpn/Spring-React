@@ -1,15 +1,15 @@
 package com.luccas.dsmovie.DTO;
 
-import java.io.Serial;
 import java.io.Serializable;
 import java.util.Objects;
 
 import com.luccas.dsmovie.entities.Movie;
+import lombok.Builder;
 
+@Builder
 public class MovieDto implements Serializable{
 
-	@Serial
-	private static final long serialVersionUID = 1L;
+
 	
 	private Long id;
 	private String title;
