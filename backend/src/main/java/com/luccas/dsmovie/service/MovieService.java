@@ -1,19 +1,15 @@
 package com.luccas.dsmovie.service;
 
-import java.io.Serializable;
-import java.util.Optional;
-
-
-import org.springframework.beans.BeanUtils;
+import com.luccas.dsmovie.DTO.MovieDto;
+import com.luccas.dsmovie.entities.Movie;
+import com.luccas.dsmovie.repository.MovieRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
-
-import com.luccas.dsmovie.DTO.MovieDto;
-import com.luccas.dsmovie.entities.Movie;
-import com.luccas.dsmovie.repository.MovieRepository;
 import org.springframework.transaction.annotation.Transactional;
+
+import java.io.Serializable;
 
 
 @Service

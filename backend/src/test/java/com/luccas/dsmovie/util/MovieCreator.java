@@ -12,4 +12,12 @@ public class MovieCreator {
         return mv;
     }
 
+    public static Movie createAnimeValidAnime(){
+        Movie mv = new Movie();
+        mv.setTitle("Homem de Ferro");
+        mv.setScore(4.5);
+        mv.setCount(4);
+        mv.setId(55L);
+        return mv;
+    }
 }
